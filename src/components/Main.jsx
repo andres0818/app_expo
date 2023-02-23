@@ -11,7 +11,7 @@ export const Main = () => {
       <AppBar />
       <Routes>
         <Route exact path="/" element={<RepositoryList />} />
-        <Route exact path="/singin" element={<Text>Working in it</Text>} />
+        <Route exact path="/signin" element={<Text>Working in it</Text>} />
       </Routes>
     </View>
   );
