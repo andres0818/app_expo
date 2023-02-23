@@ -2,7 +2,7 @@ export default [
   {
     id: "midudev.midu.dev1",
     fullName: "midudev/midu.dev",
-    description: "Blog de noticias sobre desarroll",
+    description: "Blog de noticias sobre desarrollo",
     lenguage: "HTML",
     forksCount: 3123,
     stargazersCount:52869,
@@ -13,7 +13,7 @@ export default [
   {
     id: "jaredpalmer.formik1",
     fullName: "jaredpalmer/formik",
-    description: "Blog de noticias sobre desarroll",
+    description: "Blog de noticias sobre desarrollo",
     lenguage: "HTML",
     forksCount: 3123,
     stargazersCount:52869,
@@ -35,7 +35,7 @@ export default [
   {
     id: "midudev.midu.dev",
     fullName: "midudev/midu.dev",
-    description: "Blog de noticias sobre desarroll",
+    description: "Blog de noticias sobre desarrollo",
     lenguage: "HTML",
     forksCount: 3123,
     stargazersCount:52869,
@@ -46,7 +46,7 @@ export default [
   {
     id: "jaredpalmer.formik",
     fullName: "jaredpalmer/formik",
-    description: "Blog de noticias sobre desarroll",
+    description: "Blog de noticias sobre desarrollo",
     lenguage: "HTML",
     forksCount: 3123,
     stargazersCount:52869,

@@ -1,35 +1,24 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
+import theme from "../thme";
+import { RepositoryStats } from "./RepositoryStats";
 import StyledText from "./StyledText";
 
-
-const parseThousands=value=>{
-  return value >= 1000
-  ? `${Math.round(value/ 100)/10}k`
-  :String(value)
-
-}
-
-
-
-const RepositoryStats = (props) => {
+const RepositoryItemHeader = ({
+  ownerAvatarUrl,
+  fullName,
+  description,
+  lenguage,
+}) => {
   return (
-    <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
-      <View>
-        <StyledText aling='center' fontWeight='bold'>Stars</StyledText>
-        <StyledText aling='center'>{parseThousands(props.stargazersCount)}</StyledText>
+    <View style={{ flexDirection: "row", paddingBottom: 2 }}>
+      <View style={{ paddingRight: 10 }}>
+        <Image style={styles.image} source={{ uri: ownerAvatarUrl }} />
       </View>
-      <View>
-        <StyledText aling='center' fontWeight='bold'>Forks</StyledText>
-        <StyledText aling='center'>{parseThousands(props.forksCount)}</StyledText>
-      </View>
-      <View>
-        <StyledText aling='center' fontWeight='bold'>Review</StyledText>
-        <StyledText aling='center'>{props.reviewCount}</StyledText>
-      </View>
-      <View>
-        <StyledText aling='center' fontWeight='bold'>Rating</StyledText>
-        <StyledText aling='center'>{props.ratingAverage}</StyledText>
+      <View style={{ flex: 1 }}>
+        <StyledText fontWeight="bold">{fullName}</StyledText>
+        <StyledText color="secondary">{description}</StyledText>
+        <StyledText style={styles.language}>{lenguage}</StyledText>
       </View>
     </View>
   );
@@ -38,12 +27,7 @@ const RepositoryStats = (props) => {
 export const RepositoryItem = (props) => {
   return (
     <View key={props.id} style={styles.container}>
-      <StyledText fontSize="subheading" fontWeight="bold">
-        {" "}
-        {props.fullName}
-      </StyledText>
-      <StyledText>{props.description}</StyledText>
-      <StyledText>Lenguage: {props.lenguage}</StyledText>
+      <RepositoryItemHeader {...props} />
       <RepositoryStats {...props} />
     </View>
   );
@@ -52,12 +36,25 @@ export const RepositoryItem = (props) => {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    paddingBottom: 5,
-    paddingTop: 5,
+    paddingVertical: 5,
   },
   strong: {
     color: "#09f",
     fontWeight: "bold",
     marginBottom: 5,
+  },
+  language: {
+    padding: 4,
+    marginVertical: 4,
+    color: theme.colors.white,
+    backgroundColor: theme.colors.primary,
+    alignSelf: "flex-start",
+    borderRadius: 4,
+    overflow: "hidden",
+  },
+  image: {
+    width: 48,
+    height: 48,
+    borderRadius: 4,
   },
 });

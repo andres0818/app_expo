@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   colorPrimary: {
     color: theme.colors.primary,
   },
-  colorSecundary: {
+  colorSecondary: {
     color: theme.colors.secondary,
   },
   bold: {
@@ -42,6 +42,7 @@ export default function StyledText({
     color === "secondary" && styles.colorSecondary,
     fontSize === "subheading" && styles.fontSizeSubHeading,
     fontWeight === "bold" && styles.bold,
+    style
   ];
   return (
     <Text style={textStyles} {...restOfProps}>
