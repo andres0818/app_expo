@@ -1,9 +1,9 @@
 import React from "react";
-import { Text, View } from "react-native";
-import { Route, Router, Routes } from "react-router-native";
-
+import { View } from "react-native";
+import { Route,  Routes } from "react-router-native";
 import { RepositoryList } from "./RepositoryList";
 import { AppBar } from "./AppBar";
+import Login from "../pages/Login";
 
 export const Main = () => {
   return (
@@ -11,7 +11,7 @@ export const Main = () => {
       <AppBar />
       <Routes>
         <Route exact path="/" element={<RepositoryList />} />
-        <Route exact path="/signin" element={<Text>Working in it</Text>} />
+        <Route exact path="/signin" element={<Login/>} />
       </Routes>
     </View>
   );
