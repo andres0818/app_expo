@@ -2,7 +2,7 @@ import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import StyledText from "./StyledText";
 import Constanst from "expo-constants";
-import theme from "../thme";
+import theme from "../theme";
 import { Link, useLocation } from "react-router-native";
 
 const AppBarTab = ({ children, to }) => {
