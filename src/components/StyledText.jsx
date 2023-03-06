@@ -46,7 +46,7 @@ export default function StyledText({
   ];
   return (
     <Text style={textStyles} {...restOfProps}>
-      {children}
+      {children} 
     </Text>
   );
 }
